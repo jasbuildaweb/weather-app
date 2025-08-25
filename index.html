@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-400 to-indigo-600 min-h-screen flex items-center justify-center"
+  >
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 text-center">
+      <div class="flex mb-6">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter a city or country name..."
+          class="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <button
+          id="searchBtn"
+          class="px-5 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600"
+        >
+          Search
+        </button>
+      </div>
+
+      <div id="weatherDisplay" class="hidden space-y-4">
+        <h2 id="cityName" class="text-2xl font-bold"></h2>
+        <img
+          id="weatherIcon"
+          src=""
+          alt="Weather Icon"
+          class="mx-auto w-28 h-28"
+        />
+        <div
+          class="text-3xl font-semibold flex justify-center items-center space-x-2"
+        >
+          <span id="tempValue">--</span>
+          <span id="tempUnit" class="text-lg text-blue-600 cursor-pointer"
+            >°C</span
+          >
+        </div>
+        <div id="weatherDescription" class="text-lg text-gray-700 capitalize"></div>
+      </div>
+    </div>
+  </body>
+</html>
